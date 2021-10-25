@@ -1,0 +1,62 @@
+.content {
+  width: 1210px;
+  height: 1504px;
+  margin: auto;
+  h1 {
+    margin-left: 20px;
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    color: #222222;
+  }
+  p {
+
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 150% */
+
+    /* Текст / content */
+
+    color: #222222;
+  }
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1250px;
+  }
+  .new {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 382.11px;
+    height: 448px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 16px;
+    img {
+      width: 382px;
+      height: 298px;
+      border-radius: 16px 16px 0px 0px;
+    }
+    .data {
+      padding-top: 40px;
+      margin-left: 37px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.0002px;
+      text-transform: uppercase;
+      color: #6a6a6a;
+      mix-blend-mode: normal;
+    }
+  }
+  .title {
+    margin-left: 37px;
+  }
+}

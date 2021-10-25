@@ -1,0 +1,33 @@
+.header {
+  width: 2034px;
+  height: 40px;
+  background: linear-gradient(90deg, #3951e7 20.77%, #832ab9 91.64%);
+  .logo {
+    margin-top: 12px;
+    margin-left: 409px;
+  }
+  .language {
+    width: 100px;
+    position: relative;
+    bottom: 48px;
+    margin-top: 25px;
+    margin-left: 1500px;
+    // display: flex;
+    p {
+      margin-left: 10px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 48px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+    }
+  }
+  .down {
+    position: relative;
+    margin-bottom: 7px;
+    margin-left: 10px;
+  }
+}
