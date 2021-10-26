@@ -1,0 +1,61 @@
+.post {
+  cursor: pointer;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  width: 800px;
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  img {
+    margin: auto;
+    border-radius: 20px;
+  }
+  span {
+    margin-left: 20px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.0002px;
+    text-transform: uppercase;
+    color: #6a6a6a;
+    mix-blend-mode: normal;
+  }
+  h1 {
+    margin-left: 20px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+  }
+  .text {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+  }
+}
+
+.button {
+  position: relative;
+  top: 38px;
+  right: 38px;
+  left: 900px;
+  background-color: #387bb9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}

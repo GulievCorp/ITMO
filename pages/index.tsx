@@ -1,21 +1,11 @@
 import React from 'react';
-import Content from '../components/Content';
-import { Header } from '../components/Header';
 
+import { Main } from '../components/Main';
 
 const Index = () => {
   return (
     <>
-      <Header />
-      <Content />
-      <style jsx>
-        {`
-          body {
-            width: 2034;
-            margin: auto;
-          }
-        `}
-      </style>
+      <Main />
     </>
   );
 };
