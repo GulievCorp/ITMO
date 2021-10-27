@@ -22,17 +22,16 @@ const PostPage = () => {
     const { data } = await axios.get(
       `https://news.itmo.ru/api/news/list/?ver=2.0&lead=1&per_page=9&language_id=${languageRequest}`,
     );
-    console.log(languageRequest);
     let result = data['news'].filter((obj) => {
       return obj.id == pathname;
     });
+
     setPost(result);
     setisLoading(false);
   };
 
   React.useEffect(() => {
     getNews();
-    console.log(post);
   }, []);
 
   return (

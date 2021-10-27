@@ -20,11 +20,7 @@ export const Main: React.FC<MainProps> = ({ posts }) => {
   };
 
   const changeLanguage = (e) => {
-    if (e.target.innerHTML == 'Rus') {
-      setLang(1);
-    } else {
-      setLang(2);
-    }
+    setLang(e.target.innerHTML == 'Rus' ? 1 : 2);
   };
 
   return (
