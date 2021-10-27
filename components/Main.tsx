@@ -7,7 +7,11 @@ import styles from '../styles/Header.module.scss';
 
 import Content from './Content';
 
-export const Main = () => {
+interface MainProps {
+  posts: Array<any>;
+}
+
+export const Main: React.FC<MainProps> = ({ posts }) => {
   const [lang, setLang] = React.useState<number>(1);
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
 
@@ -41,7 +45,7 @@ export const Main = () => {
           )}
         </div>
       </div>
-      <Content language={lang} />
+      <Content posts={posts} language={lang} />
     </>
   );
 };
