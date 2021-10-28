@@ -1,47 +1,42 @@
 import React from 'react';
-import Logo from '../public/img/logo.svg';
-import Rus from '../public/img/RUS.svg';
-import Down from '../public/img/Down.svg';
-import Eng from '../public/img/Eng.svg';
-import styles from '../styles/Header.module.scss';
+import Down from '../public/Down.svg';
+import classes from '../styles/Header.module.scss';
+import ContentContainer from '../containers/ContentContainer';
+import Image from 'next/image';
 
-import Content from './Content';
-
-interface MainProps {
+interface IMainProps {
   posts: Array<any>;
+  lang: Number;
+  useActiveMenu: Function;
+  activeMenu: Boolean;
+  changeLanguage: Function;
 }
 
-export const Main: React.FC<MainProps> = ({ posts }) => {
-  const [lang, setLang] = React.useState<number>(1);
-  const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
-
-  const useActiveMenu = () => {
-    setActiveMenu(!activeMenu);
-  };
-
-  const changeLanguage = (e) => {
-    setLang(e.target.innerHTML == 'Rus' ? 1 : 2);
-  };
-
+const Main: React.FC<IMainProps> = ({ posts, lang, useActiveMenu, activeMenu, changeLanguage }) => {
   return (
     <>
-      <div className={styles.header}>
-        <img className={styles.logo} src={Logo} alt="" />
-
-        <div className={styles.language}>
-          {lang == 1 ? <img src={Rus} alt="" /> : <img src={Eng} alt="" />}{' '}
-          <img className={styles.down} onClick={useActiveMenu} src={Down} alt="" />
+      <div className={classes.header}>
+        <Image className={classes.logo} src="/logo.svg" width={161} height={33} />
+        <div className={classes.language}>
+          {lang == 1 ? (
+            <Image src="/RUS.svg" width={24} height={24} alt="" />
+          ) : (
+            <Image src="/ENG.svg" width={24} height={24} alt="" />
+          )}{' '}
+          <img className={classes.down} onClick={() => useActiveMenu()} src={Down} alt="" />
           {activeMenu ? (
-            <div className={styles.vipadashkaActive}>
-              <p onClick={changeLanguage}>Eng</p>
-              <p onClick={changeLanguage}>Rus</p>
+            <div className={classes.vipadashkaActive}>
+              <p onClick={(e) => changeLanguage(e)}>Eng</p>
+              <p onClick={(e) => changeLanguage(e)}>Rus</p>
             </div>
           ) : (
             ''
           )}
         </div>
       </div>
-      <Content posts={posts} language={lang} />
+      <ContentContainer posts={posts} language={lang} />
     </>
   );
 };
+
+export default Main;

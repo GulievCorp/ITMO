@@ -25,7 +25,6 @@ const PostPage = () => {
     let result = data['news'].filter((obj) => {
       return obj.id == pathname;
     });
-
     setPost(result);
     setisLoading(false);
   };
