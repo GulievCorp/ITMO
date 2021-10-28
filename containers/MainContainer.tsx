@@ -5,12 +5,12 @@ interface IMainContainer {
   posts: Array<any>;
 }
 
-export const MainConteiner: React.FC<IMainContainer> = ({ posts }) => {
+export const MainContainer: React.FC<IMainContainer> = ({ posts }) => {
   const [lang, setLang] = React.useState<number>(1);
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
 
   const useActiveMenu = () => {
-      console.log('aaa');
+    console.log('aaa');
     setActiveMenu(!activeMenu);
   };
 
@@ -23,6 +23,7 @@ export const MainConteiner: React.FC<IMainContainer> = ({ posts }) => {
       lang={lang}
       activeMenu={activeMenu}
       useActiveMenu={useActiveMenu}
-      changeLanguage={changeLanguage}    />
+      changeLanguage={changeLanguage}
+    />
   );
 };

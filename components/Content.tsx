@@ -33,7 +33,7 @@ const Content: React.FC<IContentProps> = ({
       <div className={classes.news}>
         {isLoading
           ? Array(posts.length - 1).fill(<MyLoader />)
-          : posts.map((item, index) => {
+          : posts.map((item) => {
               return (
                 <div
                   onClick={() => router.push('/post/' + item.id + lang)}

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { useRouter } from 'next/dist/client/router';
-import styles from '../../styles/Post.module.scss';
+import classes from '../../styles/Post.module.scss';
 import MyLoader from '../../components/PostLoader';
 import Head from 'next/dist/shared/lib/head';
 
@@ -46,16 +46,16 @@ const PostPage = () => {
       ) : (
         post.map((item) => {
           return (
-            <div id="post" className={styles.post} key={item.id}>
+            <div id="post" className={classes.post} key={item.id}>
               <img src={item.image_big} alt="" />
               <span>{item.date}</span>
               <h1>{item.title}</h1>
-              <div className={styles.text} dangerouslySetInnerHTML={{ __html: item.lead }} />
+              <div className={classes.text} dangerouslySetInnerHTML={{ __html: item.lead }} />
             </div>
           );
         })
       )}
-      <button className={styles.button} onClick={() => router.push('/')}>
+      <button className={classes.button} type="button" onClick={() => router.push('/')}>
         Назад
       </button>
     </div>

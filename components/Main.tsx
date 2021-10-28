@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import Down from '../public/Down.svg';
 import classes from '../styles/Header.module.scss';
 import ContentContainer from '../containers/ContentContainer';
 import Image from 'next/image';
@@ -16,14 +16,20 @@ const Main: React.FC<IMainProps> = ({ posts, lang, useActiveMenu, activeMenu, ch
   return (
     <>
       <div className={classes.header}>
-        <Image className={classes.logo} src="/logo.svg" width={161} height={33} />
+        <img className={classes.logo} src="/logo.svg" alt="Логотип ИТМО" />
         <div className={classes.language}>
           {lang == 1 ? (
-            <Image src="/RUS.svg" width={24} height={24} alt="" />
+            <Image src="/RUS.svg" width={24} height={24} alt="Русский" />
           ) : (
-            <Image src="/ENG.svg" width={24} height={24} alt="" />
+            <Image src="/ENG.svg" width={24} height={24} alt="Английский" />
           )}{' '}
-          <img className={classes.down} onClick={() => useActiveMenu()} src={Down} alt="" />
+          <img
+            className={classes.down}
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            onClick={() => useActiveMenu()}
+            src="/Down.svg"
+            alt="Кнопка всплывающего меню"
+          />
           {activeMenu ? (
             <div className={classes.vipadashkaActive}>
               <p onClick={(e) => changeLanguage(e)}>Eng</p>

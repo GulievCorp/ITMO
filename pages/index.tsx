@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import Head from 'next/head';
 
-import { MainConteiner } from '../containers/MainContainer';
+import { MainContainer } from '../containers/MainContainer';
 
 export const getStaticProps = async () => {
   const { data } = await axios.get(
@@ -26,8 +26,7 @@ const Index: React.FC<PostItem> = ({ posts }) => {
       <Head>
         <title>Новости ИТМО</title>
       </Head>
-      <MainConteiner posts={posts} />
-
+      <MainContainer posts={posts} />
     </>
   );
 };
