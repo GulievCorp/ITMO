@@ -31,7 +31,7 @@ const Main: React.FC<IMainProps> = ({ posts, lang, useActiveMenu, activeMenu, ch
             alt="Кнопка всплывающего меню"
           />
           {activeMenu ? (
-            <div className={classes.vipadashkaActive}>
+            <div className={classes.popupActive}>
               <p onClick={(e) => changeLanguage(e)}>Eng</p>
               <p onClick={(e) => changeLanguage(e)}>Rus</p>
             </div>
